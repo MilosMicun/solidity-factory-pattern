@@ -15,4 +15,8 @@ contract TokenFactory {
         emit TokenCreated(address(token), msg.sender);
         return address(token);
     }
+
+    function getTokensCount() public view returns (uint256) {
+        return tokens.length;
+    }
 }
